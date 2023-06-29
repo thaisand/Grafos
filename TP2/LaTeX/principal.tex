@@ -1,0 +1,100 @@
+\documentclass[a4paper,12pt,Times]{article}
+\usepackage{abakos}  %pacote com padrão da Abakos baseado no padrão da PUC
+\usepackage{caption}
+\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{url}
+\usepackage{hyperref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Capa da revista
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\setcounter{page}{80} %iniciar contador de pagina de valor especificado
+\newcommand{\monog}{Trabalho Prático 2}
+\newcommand{\monogES}{Model - Magazine Abakós - ICEI - PUC Minas}
+\newcommand{\tipo}{Artigo }  % Especificar a seção tipo do trabalho: Artigo, Resumo, Tese, Dociê etc
+\newcommand{\origem}{Brasil}
+\newcommand{\editorial}{\textbf{Abakos}, Belo Horizonte,v. 1, n. 1, p. 00-00, Maio 2023 - ISSN: 2316-9451}  % p. xx-xx – páginas inicial-final do artigo
+% \newcommand{\lcc}{\scriptsize{Licença Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported}}
+
+%%%%%%%%%%%%%%%%%INFORMAÇÕES SOBRE AUTOR PRINCIPAL %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\AutorA}{Thais Andreatta da Silva Carmo}
+\newcommand{\funcaoA}{Bacharelanda em Ciência da Computação}
+\newcommand{\emailA}{tascarmo@pucminas.br}
+\newcommand{\cursA}{Instituto de Ciências Exatas e Informática da PUC Minas}
+% 
+\newcommand{\AutorB}{Hugo Portes Araújo Cattoni}
+\newcommand{\funcaoB}{Bacharelando em Ciência da Computação}
+\newcommand{\emailB}{hcattoni@sga.pucminas.br}
+\newcommand{\cursB}{Instituto de Ciências Exatas e Informática da PUC Minas}
+% 
+% \newcommand{\AutorC}{Giovanni Candido da Silva}
+% \newcommand{\funcaoC}{Bacharel em Sistemas de Informação}
+% \newcommand{\emailC}{giovanni@pucminas.br}
+% \newcommand{\cursC}{Instituto de Ciências Exatas e de Informática da PUC Minas}
+
+% Definir macros para o nome da Instituição, da Faculdade, etc.
+\newcommand{\univ}{Pontifícia Universidade Católica de Minas Gerais}
+
+\newcommand{\keyword}[1]{\textsf{#1}}
+
+\begin{document}
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% %% Pagina de titulo
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{flushleft}
+
+\begin{minipage} [c][5cm][b]{16.5cm} % a primeira minipágina tem uma altura de 1.5cm e uma largura de 2.3cm.
+% comando que introduz o logo da escola que nesta altura já terá de estar na pasta imagens que 
+%por sua vez está na pasta onde se guardou o arquivo tex. E introduzimos essa imagem com a mesma altura da minipage.
+\includegraphics[scale=1.1]{figuras/pucmg.png} 
+\end{minipage}
+
+ \vspace{0cm} {
+ \singlespacing \Large{\monog \symbolfootnote[1]{Artigo apresentado à Revista Abakos} \\ }
+  \normalsize{\monogES}
+ }
+\end{flushleft}
+\begin{flushright}
+\singlespacing 
+\normalsize{\AutorA \footnote{\funcaoA, \cursA, \origem -- \emailA }} \\
+\normalsize{\AutorB \footnote{\funcaoB, \cursB, \origem -- \emailB }} \\
+% \normalsize{\AutorC \footnote{\funcaoC, E-mail:\emailC \\ \cursC, \origem. }} \\
+% \normalsize{\AutorD \footnote{\funcaoD \\ Pais de origem: \origemD. E-mail: \emailD}} \\
+%deixar com o valor `0` e usar o '*' no inicio da frase
+% \symbolfootnote[0]{Artigo recebido em 10 de julho de 1983 e aprovado em 29 de maio 2012}
+\end{flushright}
+\thispagestyle{empty}
+
+\begin{abstract}
+\noindent
+Este relatório contém a documentação do Trabalho Prático II, feita em \LaTeX. O problema dos k-centros é uma tarefa clássica da análise de dados. Sua solução envolve algoritmos de apromixação e de agrupamento, chamadas técnicas de \textit{clustering}.  Essas técnicas são utilizadas para facilitar a análise e compreensão dos dados. 
+
+Existem diversos tipos de problemas de \textit{clustering}. Neste problema, dado um grafo completo com custos nas arestas e um inteiro positivo \textit{k}, deseja-se encontrar um conjunto de k vértices (chamados centros) que minimize a maior distância de um vértice qualquer do grafo a um desses conjuntos. Essa distância é denominada de \textbf{raio} da solução.
+
+
+\textbf{\keyword{Palavras-chave:  }} clustering, grafos, centros, MST, força bruta. 
+\end{abstract}
+
+
+\selectlanguage{brazilian}
+ \onehalfspace  % espaçamento 1.5 entre linhas
+ \setlength{\parindent}{1.25cm}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% INICIO DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\include{textos}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% FIM DO TEXTO
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\end{document}
