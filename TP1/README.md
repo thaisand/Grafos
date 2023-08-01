@@ -1,9 +1,11 @@
-# Grafos-TP2
+# Grafos-TP1
 
-Neste projeto, foram implementadas e comparadas duas formas distintas de resolução do problema dos k-centros de um grafo:
-1. uma exata (capaz de obter a solução mínima para instâncias pequenas); e
-2. outra aproximada (capaz de obter soluções razoáveis mesmo quando a instância for grande 
-demais para o método exato).
+Neste projeto, foram implementadas três formas de resolução do problema de se determinar os blocos existentes em um grafo:
 
-As implementações foram testadas com as instâncias disponíveis pela biblioteca das p-medianas da [OR-Library](http://people.brunel.ac.uk/~mastjjb/jeb/orlib/files/). 
-Além das implementações, foi realizada uma análise comparativa entre elas, visando determinar diferenças no desempenho (efcácia e efciência) das mesmas para resolução do problema, principalmente na medida que o tamanho da instância aumenta.
+1. um método que verifica a existência de dois caminhos internamente disjuntos (ou um ciclo) entre cada par de vértices do bloco;
+2. um método identifique articulações testando a conectividade após a remoção de cada vértice; e
+3. o método proposto por Tarjan (1972).
+
+Foram realizados experimentos que para avaliar o tempo médio gasto para as três estratégias aplicadas a grafos aleatórios contendo 100, 1.000, 10.000 e 100.000 vértices.
+
+
